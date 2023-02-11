@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // 使用 DOM to Image 截圖
-  async function triggerDomToImage({ targetId }) {
+  const triggerDomToImage = async ({ targetId }) => {
 
     // 建立檔案名稱
     const filename = 'LetsWrite_Demo_' + new Date().getTime();
 
     // DOM to Image
     const el = document.getElementById(targetId);
+    const dataUriTemp = await domtoimage.toPng(el);
     const dataUri = await domtoimage.toPng(el);
+
+    document.getElementById('img').src = dataUri;
 
     // 執行下載
     const link = document.createElement('a');
@@ -18,18 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
-  // #section1
-  const btnSection1 = document.getElementById('capture1');
-  btnSection1.addEventListener('click', e => {
-    e.preventDefault();
-    triggerDomToImage({ targetId: 'section1' });
-  });
+  // 點擊按鈕觸發截圖
+  function addCaptureEventListener(id) {
+    const btn = document.getElementById(`capture${id}`);
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      await triggerDomToImage({ targetId: `section${id}` });
+    });
+  }
 
-  // #section2
-  const btnSection2 = document.getElementById('capture2');
-  btnSection2.addEventListener('click', e => {
-    e.preventDefault();
-    triggerDomToImage({ targetId: 'section2' });
-  });
+  addCaptureEventListener(1); // #section1
+  addCaptureEventListener(2); // #section2
 
 })

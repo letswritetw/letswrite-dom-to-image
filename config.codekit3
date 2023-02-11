@@ -17,6 +17,19 @@
       "oAP" : "\/.gitignore",
       "oF" : 0
     },
+    "\/dist\/img_big.jpeg" : {
+      "ft" : 16384,
+      "iS" : 547154,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/img_big.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/dist\/img1.jpeg" : {
       "ft" : 16384,
       "iS" : 13451,
@@ -26,19 +39,6 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/dist\/img1.jpg" : {
-      "ft" : 16384,
-      "iS" : 20760,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/img1.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
