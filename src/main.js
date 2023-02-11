@@ -8,10 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // DOM to Image
     const el = document.getElementById(targetId);
-    const dataUriTemp = await domtoimage.toPng(el);
-    const dataUri = await domtoimage.toPng(el);
-
-    document.getElementById('img').src = dataUri;
+    const config = {
+      quality: 1,
+      style: {
+        "filter": "grayscale(100%)"
+      }
+    };
+    const dataUriTemp = await domtoimage.toPng(el, config);
+    const dataUri = await domtoimage.toPng(el, config);
 
     // 執行下載
     const link = document.createElement('a');
