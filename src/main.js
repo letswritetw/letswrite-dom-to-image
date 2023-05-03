@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "filter": "grayscale(100%)"
       }
     };
-    const dataUriTemp = await domtoimage.toPng(el, config);
+    // const dataUriTemp = await domtoimage.toPng(el, config);
     const dataUri = await domtoimage.toPng(el, config);
 
     // 執行下載
